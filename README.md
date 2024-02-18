@@ -4,7 +4,7 @@ Asynchronous single-threaded event handler
 For demonstration purposes only  
 
 AsyncEventHandler implementation  
-Dialect: C++20 (uses <semaphore>)  
+Dialect: C++20 (uses \<semaphore\>)  
 
 Properties:  
 - 1 thread, sleeps when idle  
