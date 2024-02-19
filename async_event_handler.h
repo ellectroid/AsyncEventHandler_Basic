@@ -12,7 +12,7 @@
 #include <thread>
 #include <semaphore>
 
-namespace async_el{
+namespace el_async{
 
 class AsyncEventHandler{
 
