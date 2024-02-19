@@ -1,6 +1,6 @@
 #include "async_event_handler.h"
 
-namespace async_el{
+namespace el_async{
 
 AsyncEventHandler::AsyncEventHandler() :
 		semaphore_(0) {
