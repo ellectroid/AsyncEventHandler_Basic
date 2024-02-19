@@ -31,13 +31,13 @@ int main() {
 	std::cout << "Config: allocating memory" << std::endl;
 	//alignas(8) char event_handler_param_table[1024] = { 0 }; //ALIGNMENT! creating arbitrary memory buffer for events; note alignment, internal structures hold pointers
 	//void** event_handler_param_table_mem_auto_aligned[128] = {0}; //declaring an array of pointers will result in correct alignment
-	async_el::AsyncEventHandler::handler_params event_handler_param_table[16]; //specifying length explicitly
+	el_async::AsyncEventHandler::handler_params event_handler_param_table[16]; //specifying length explicitly
 	int event_handler_event_queue[32] = { 0 }; //create event queue just as an array of event numbers (used as a ring buffer)
 	std::thread my_event_handler_thread; //thread object can be anywhere
 
 	//Step 1: create object
 	std::cout << "Config: creating object" << std::endl;
-	async_el::AsyncEventHandler my_event_handler; //creating object
+	el_async::AsyncEventHandler my_event_handler; //creating object
 	int error = my_event_handler.error(); //returns error code, clears error code in the object
 	//most functions will do nothing if error code in the object is set
 	//such as all bind functions
